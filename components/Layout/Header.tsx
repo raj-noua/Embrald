@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu } from "react-feather";
 
-const links = [
+export const links = [
   {
     text: "Home",
     url: "/",
@@ -99,7 +99,7 @@ const Header = () => {
           <div
             className={`fixed z-[99] top-50 ${
               isNavOpen ? "left-0" : "-left-full"
-            } w-screen h-screen bg-secondaryop lg:hidden flex flex-col justify-center items-center text-primary duration-200`}
+            } w-screen h-screen bg-primary lg:hidden flex flex-col pt-[50px] items-center text-white duration-200`}
             onClick={toggleMenu}
           >
             {links.map((item, index) => (
@@ -117,12 +117,15 @@ const Header = () => {
         {/* Banner section end */}
       </header>
       <div className="h-[100px]"></div>
-      <div className="w-full h-1/2 lg:h-screen relative">
+      <div
+        className={`w-full h-[50vh] lg:h-screen relative`}
+        style={{ clipPath: "inset(0)" }}
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="banner.jpg"
+          src="banner2.jpg"
           alt="banner"
-          className="w-full h-1/2 lg:h-screen object-cover"
+          className="w-full h-1/2 lg:h-screen object-cover fixed t-[100px]"
         />
         <div className="absolute w-full h-full bg-[#000000AA] top-0 left-0 flex justify-center items-center text-center">
           <span className="text-white text-base px-2 lg:text-4xl font-bold">
